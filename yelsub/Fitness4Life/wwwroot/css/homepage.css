@@ -1,0 +1,37 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+#index-body {
+    background-image: url('https://images.pexels.com/photos/4498294/pexels-photo-4498294.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+   
+}
+
+
+table {color:  white;
+}
+
+.fullwidth {
+    width: 100%;
+    
+
+}
+
+#index-button1, 
+#index-button2, 
+#index-button3
+{
+   
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color .2s;
+    border: 2px solid black;
+    transform-origin: 0% 0%;
+}
+
+#index-button1:hover,
+#index-button2:hover,
+#index-button3:hover{
+    background-color: black;
+}

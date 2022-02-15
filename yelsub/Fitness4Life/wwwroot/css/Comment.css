@@ -1,0 +1,43 @@
+#NicknameC {
+    background: red;
+    padding: 8px 8px 8px 8px;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+}
+#post{
+    border: black 2px solid ;
+    border-radius: 5px;
+    background: #17a2b8;
+   
+}
+#C_title{
+    margin-top: 0;
+    margin-left: 10px;
+    border-radius: 0 0 10px 10px;
+    background: #7abaff;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+}
+#C_message{
+    margin-left: 10px;
+}
+#C_time{
+    background: none;
+    height: 30px;
+    text-align: right;
+}
+#C_del{
+    background: none;
+    height: 30px;
+    text-align: right;
+}
+#tab2{
+    text-align: center;
+    width: 100%;
+}
+#Summary{
+    width: 200px;
+}

@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Identity Framework</h2>
+
+<p>New stuff in this example:</p>
+
+<ul>
+    <li>Creating test users in the database initializer using <i>UserManager</i> and <i>RoleManager</i>.<br>
+        See <i>Data/ApplicationDbInitializer.cs</i> and <i>Program.cs</i>.</li><br>
+    
+    <li>Extending the default <i>IdentityUser</i> with new fields by creating a new model called <i>ApplicationUser</i>.<br>
+        See <i>Models/ApplicationUser.cs</i>. See slides for the other required changes to use this new model.</li><br>
+    
+    <li>Editing the default Identity user interface by generating files and editing them.<br>
+        See the files inside <i>Areas/Identity</i>. See slides for the generator commands.</li><br>
+    
+    <li>Creating foreign keys and navigation properties to users in other models.<br>
+        See <i>Models/Review.cs</i>.</li><br>
+</ul> 

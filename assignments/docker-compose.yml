@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  hub:
+    container_name: selenium-hub
+    image: selenium/hub
+    environment:
+      - GRID_MAX_SESSION=1
+      - GRID_MAX_INSTANCES=1
+      - GRID_BROWSER_TIMEOUT=10000
+      - GRID_TIMEOUT=10000
+      - GRID_NEW_SESSION_WAIT_TIMEOUT=10000
+      - JAVA_OPTS=-Dselenium.LOGGER.level=WARNING
+    expose:
+      - 4444
+
+  chrome:
+    image: selenium/node-chrome
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - JAVA_OPTS=-Dselenium.LOGGER.level=WARNING
+    shm_size: 2gb

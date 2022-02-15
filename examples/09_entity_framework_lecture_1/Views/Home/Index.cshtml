@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>HTML forms with MVC and a database</h2>
+
+<p>This example shows how to use the database context to add and retrieve data using models. The <i>Authors</i>
+    controller has two actions. <i>Index</i> fetches data from the database and sends it to the view. This is the view
+    you are currently looking at. The <i>Add</i> view contains the HTML form, and the <i>Add</i>action receives the
+    form data as a model and adds it to the database.</p>
+
+<p>A <i>DbSet</i> for the <i>Author</i> model was added in <i>Data/ApplicationDbContext.cs</i>. A database initializer
+    was added in <i>Data/ApplicationDbInitializer.cs</i> to recreate the database on startup with some sample data.
+    This initializer was enabled by editing the <i>main()</i> function in <i>Program.cs</i>.</p>
+
+<p>See the menu items at the top of the page for details on each page.</p>

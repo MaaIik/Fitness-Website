@@ -1,0 +1,100 @@
+@model ForumCommentViewModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<body id="bodyy">
+@{
+    var Fm = (int) ViewData["item"];
+    @foreach (var item in Model.Forums)
+    {
+    @if (item.Id == Fm)
+    {
+<div class="container">
+<div class="col-lg-12">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox-content forum-container">
+            <div id="forum-item" class="forum-item active">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="forum-icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <a class="forum-item-title">@item.Title
+                        </a>
+                        <div class="forum-sub-title">@item.Message</div>
+                    </div>
+                    <div class="col-md-3 forum-info">
+                        <span id="FTime" class="views-number">
+                            @item.Time
+                        </span>
+                        <div class="forum-sub-title">@item.ApplicationUser.Nickname</div>
+                    </div>        
+                    @if (SignInManager.IsSignedIn(User))        
+                    {
+                        @foreach (var comm in Model.Comments)
+                        {
+                            if (item.Id == comm.ForumId)
+                            {
+                                <div class="container">
+                                    <div class="col-lg-12">
+                                        <div class="wrapper wrapper-content animated fadeInRight">
+                                            <div class="ibox-content forum-container">
+                                                <div id="forum-item" class="forum-item active">
+                                                    <div class="row" id="nick">
+                                                        <div class="col-md-7">
+                                                            <a class="forum-item-title">@comm.ApplicationUser.Nickname</a>
+                                                        </div>       
+                                                        <div class="col-md-2 forum-info">
+                                                            <span id="FTime">@item.Time</span>
+                                                        </div>    
+                                                        <div>
+                                                            <small>
+                                                                @if (SignInManager.IsSignedIn(User))
+                                                                {
+                                                                    @if (comm.ApplicationUserId == UserManager.GetUserId(User))
+                                                                    {
+                                                                        <a asp-controller="Posting" asp-action="Delete" asp-route-id="@comm.CommentId">Delete</a>
+                                                                        <a asp-controller="Posting" asp-action="Edit" asp-route-id="@comm.CommentId">Edit</a>
+                                                                            
+                                                                    }
+                                                                }
+                                                            </small>    
+                                                        </div>    
+                                                    </div>
+                                                    <div class="row" id="nick">
+                                                        <div id="box-message">@comm.Summary</div> 
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>    
+                                                        
+                            }
+                        }
+                    }
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        @using (Html.BeginForm("CreateAdd", "Posting", FormMethod.Post))
+                        {
+                            <div class="content">
+                                <input id="create-m-box" class="comment-box" type="text" name="Comment"/>
+                            </div>   
+                            <input type="hidden" name="FId" value="@item.Id"/>
+                            <br/>
+                            <div class="content">
+                                <input type="submit" value="Comment" class="btn btn-success"> 
+                            </div>  
+                        }
+                    }
+                                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+}
+}    
+}
+</body>

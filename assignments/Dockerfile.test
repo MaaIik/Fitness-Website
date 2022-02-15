@@ -1,0 +1,25 @@
+FROM python:3.8-alpine
+
+WORKDIR /tests
+
+# Install native dependencies
+RUN apk update && apk add \
+    build-base \
+    coreutils \
+    linux-headers
+
+# Install Python dependencies
+RUN pip install --upgrade pip && \
+    pip install \
+    docker \
+    faker \
+    pytest \
+    pytest-repeat \
+    pytest-xdist \
+    requests \
+    selenium
+
+COPY *.py ./
+COPY solutions solutions
+
+ENTRYPOINT ["py.test", "--verbose" , "--color=yes"]

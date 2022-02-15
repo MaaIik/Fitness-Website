@@ -1,0 +1,49 @@
+@model IEnumerable<QuizMania.Models.Quiz>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                
+                
+                @using (Html.BeginForm("Create", "Question", FormMethod.Post))
+                             {
+                                 <input type="hidden" name="QId" value="@item.Id"/>
+                                 <br/>
+                                 <input type="submit" value="Start Quiz" class="btn btn-success">
+                             }
+                
+                
+                @* <a asp-action="Start" asp-route-id="@item.Id">Start Quiz</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

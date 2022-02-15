@@ -1,0 +1,89 @@
+commit ec0b007e465233f897a509425ad8a32c5d0c0679
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Sep 28 11:02:04 2020 +0200
+
+    Print dotnet console output on errors
+
+commit b1127490e11341506078adb8c0c67ae7a4e4d9af
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Fri Sep 11 13:43:26 2020 +0200
+
+    Added assignment 4 tests
+
+commit 86248276e23ac315ffd5c8fea013950c0c709aab
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Thu Sep 3 15:14:16 2020 +0200
+
+    Improved field size check in assignment 3
+
+commit 2cfb35254e13d5c2e9701f9817d806dbee0a044f
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 31 19:56:30 2020 +0200
+
+    Added assignment 3 tests
+
+commit d8995c3fc72e49db5c0d9ff0b143b04b20ede397
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 24 12:13:20 2020 +0200
+
+    Added assignment 2 tests for CSS and JS files
+
+commit 33f9439e263c348b649204869534bfc1fe9443d5
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Fri Aug 21 11:11:11 2020 +0200
+
+    Added assignment 2 tests
+
+commit b61fba807e1192c5902b78c3ede90d2e0b312eb0
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Wed Aug 19 13:09:23 2020 +0200
+
+    Fixed test.sh permissions
+
+commit 906496139a80a1fe211581805681ded58fe154f0
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 17 23:17:17 2020 +0200
+
+    Fixed list of tags search on page
+
+commit 06201ba77c63880d9855d97b51a37c80d53fe2c9
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 17 17:15:09 2020 +0200
+
+    Added build-base to test dependencies
+
+commit 431ea19c6f18d46d76f904812b097ab4ff4d8862
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 17 17:09:25 2020 +0200
+
+    Added native dependencies to test image
+
+commit 7220d2ac176b5fdc7cf783ba47bc6eab02058198
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 10 20:18:42 2020 +0200
+
+    Force rebuild on every test run
+
+commit cd31c329156dca92e279e5d9f611337703957033
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 10 18:50:02 2020 +0200
+
+    Fixed temporary files test
+
+commit 8a2bab7947d24d8d2f9e4ef5375b0173bacad306
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Mon Aug 10 18:49:50 2020 +0200
+
+    Added dockerignore
+
+commit 011298a7d3c8dc49e03fe2e2c8caff74f4a21563
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Wed Aug 5 10:55:49 2020 +0200
+
+    Added test script
+
+commit c989d967d57d36ea1b81e7448148047f67aad503
+Author: Christian Auby <christian.auby@uia.no>
+Date:   Tue Aug 4 17:23:45 2020 +0200
+
+    Added assignment 1 tests

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<center><h1>Workout</h1></center>
+
+<br>
+<br>
+
+<center><h2>Workout by Gender</h2></center>
+
+
+<table style="width:100%">
+    <tr>
+        <th>
+            <center>@Html.ActionLink("Male","Index","MuscleGroups",new{area="Workout"},null)</center>
+        </th>
+        <th>
+            <center>@Html.ActionLink("Female","Index","MuscleGroups",new{area="Workout"},null)</center>
+        </th>
+    </tr>
+</table>

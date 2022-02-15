@@ -1,0 +1,43 @@
+﻿@model Author
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Add author</h2>
+
+<p>@ViewBag.Message</p>
+
+<p>There are two ways of using a HTML form with an MVC model. You can either create a standard HTML form and set the
+    name of the elements manually so that they match the fields in the model, or you can use the <i>asp-for</i>
+    attribute.</p>
+
+<p>The <i>asp-for</i> atttribute will set the id and name of the input automatically. This method is recommended as it
+    provides better error feedback during view compilation. Using the <i>asp-for</i> attribute will also set the input
+    type automatically.</p>
+
+<p>The <i>asp-for</i> attribute can also be used with label elements. This will automatically use the <i>DisplayName</i>
+    attribute from the model as the label text.</p>
+
+<p>Form validation with JavaScript has been added by adding two new libraries in <i>Views/Shared/_Layout.cshtml</i>
+    and adding <i>span</i> elements with the <i>asp-validation-for</i> attribute after each input element.</p>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" placeholder="Enter first name">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" placeholder="Enter last name">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthdate"></label>
+        <input asp-for="Birthdate" class="form-control" placeholder="Enter birth date">
+        <span asp-validation-for="Birthdate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

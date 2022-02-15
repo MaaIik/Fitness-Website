@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<body id="index-body">
+
+<div class="container align-content-center fullwidth">
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <a id="index-button1" class="btn btn-primary btn-lg btn-block btn-huge" asp-action="Index" asp-controller="MuscleGroups" asp-area="Workout">Workout</a>
+        </div>
+        <div class="col-md-4">
+            <a id="index-button2" class="btn btn-primary btn-lg btn-block btn-huge" asp-action="Index" asp-controller="Nutrition" asp-area="Nutrition">Nutrition</a>
+        </div>
+        <div class="col-md-4">
+            <a id="index-button3" class="btn btn-primary btn-lg btn-block btn-huge" asp-action="Index" asp-controller="Posting">Forum</a>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
+

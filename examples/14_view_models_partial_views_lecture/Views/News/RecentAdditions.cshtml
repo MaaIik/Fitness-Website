@@ -1,0 +1,22 @@
+﻿@model RecentAdditionsViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Recent additions</h2>
+
+<h3>Authors</h3>
+
+@foreach (var author in Model.Authors)
+{
+    <partial name="_AuthorPartial" model="author" />
+}
+
+<h3>Books</h3>
+
+@foreach (var book in Model.Books)
+{
+    <partial name="_BookPartial" model="book" />
+}

@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Slackey' rel='stylesheet'>
+</head>
+<body id="main1">
+<h3 class="display-4 text-center">Welcome to Quizmania!</h3>
+<table style="width:100%">
+    <tr>
+        <br>
+    </tr>
+    <tr>
+        <th>
+            <div class="text-center">
+                <a asp-controller="Quiz" asp-action="Create">
+                    <h1 id="create" class="display-4">Create Quiz</h1></a>
+            </div>
+
+            @* <h1>Create Quiz</h1> *@
+            @* *@
+            @* <p> *@
+            @*     <a asp-action="Create">Create New</a> *@
+            @* </p> *@
+
+        </th>
+        <th>
+            <div class="text-center">
+                <a asp-controller="Quiz" asp-action="Join">
+                    <h1 id="join" class="display-4">Join Quiz</h1></a>
+            </div>
+        </th>
+        <th>
+            <div class="text-center">
+                <a asp-controller="Quiz" asp-action="Index">
+                    <h1 id="start" class="display-4">Start Quiz</h1></a>
+            </div>
+        </th>
+
+    </tr>
+</table>
+</body>

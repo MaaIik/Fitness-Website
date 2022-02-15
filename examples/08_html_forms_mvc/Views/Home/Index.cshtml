@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>HTML forms with MVC example</h2>
+
+<p>This example combines the use of HTML forms with MVC models. The relevant code is in the <i>Models/Author.cs</i>
+    model, the <i>Authors</i> controller and the <i>Views/Authors/Index</i> view.</p>
+    
+<p>The ViewBag can be used to send small pieces of data from controllers to views. In this example the controller
+    sends a simple message that is displayed in the view.</p>
+    
+<p>For more complex data you want to use a model. You start by creating a class in the <i>Models</i> directory.
+    After that you can data bind HTML form data in the controller by adding it as a parameter to the action,
+    and/or you can send an instance of the model to the view.</p>
+    
+<p>The <i>Authors</i> controller also shows how to log to the console. You should set the <i>Default</i> log level to
+    <i>Debug</i> in <i>appsettings.Development.json</i> so that debug logs are shown in the debug build.</p>
+
+<a asp-controller="Authors" asp-action="Index">See the form example</a>

@@ -1,0 +1,30 @@
+﻿
+
+body {
+    background-color: #abdde5;
+}
+
+.display-4{
+    font-family: 'Slackey'; 
+    background-color: gold;
+    
+}
+
+#create{
+    color: red;
+    
+}
+
+#join{
+    color: blue;
+    
+}
+
+#start{
+    color: black;
+    
+}
+
+header{
+    background-color: greenyellow;
+}

@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>MVC with custom JavaScript and CSS</h3>
+
+<p>This example shows how to add JavaScript and CSS in two ways:</p>
+
+<ol>
+    <li>For all pages in the layout</li>
+    <li>For only page using sections</li>
+</ol>
+
+<p>For option 1 see the existing entries in <i>Views/Shared/Layout.cshtml</i>.
+    CSS goes at the top, JavaScript at the bottom.</p>
+<p>For option 2 see <i>Views/Home/Index.cshtml</i>.
+    A new section has also been added for CSS in the layout as that doesn't exist by default.</p>
+
+<h3>Configuring runtime compilation of views</h3>
+
+<p>
+    Tired of restarting the application when you change view code? You can enable runtime compilation of views,
+    after which you only need to refresh the website to see the changes. Here's how to do it:
+</p>
+
+<ol>
+    <li>
+        Install the required package from the Terminal in Rider:
+        <pre>dotnet add package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation</pre>
+    </li>
+    <li>
+        Modify <i>ConfigureServices()</i> in <i>Startup.cs</i>:
+        <pre>services.AddControllersWithViews()
+        .AddRazorRuntimeCompilation();</pre>
+    </li>
+</ol>
+
+<p>You can now refresh the browser (F5) to see changes instantly.</p>
+
+@* Injects a new CSS file into the layout *@
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/custom.css"/>
+}
+
+@* Injects a new JavaScript file into the layout *@
+
+@section Scripts {
+    <script src="~/js/custom.js" asp-append-version="true"></script>
+}

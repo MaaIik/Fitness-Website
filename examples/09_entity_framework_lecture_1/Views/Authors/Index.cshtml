@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Author>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>List of authors</h2>
+
+<p>This model of this view is <i>IEnumerable&lt;Author&gt;</i>. The controller must send a list of authors, which are
+    then used in a foreach loop below to show each author using HTML. Mixing C# and HTML like this is what Razor
+    scripting is.</p>
+
+@foreach (var author in Model) {
+    <p>@author.FirstName @author.LastName @author.Birthdate</p>
+}

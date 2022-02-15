@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>View models and partial views</h2>
+
+<p>New stuff in this example:</p>
+
+<ul>
+    <li>A view model to combine data from two seperate tables was created in
+        <i>Models/RecentAdditionsViewModel.cs</i>.</li><br>
+    
+    <li>This view model is used in <i>Controllers/NewsController.cs</i> and
+        <i>Views/News/RecentAdditions.cshtml</i>.</li><br>
+    
+    <li>Partial views to display an author and a book was created in <i>Views/Shared/_*Partial.cshtml</i>.<br>
+        These can be used any place where you want to display these models.</li><br>
+    
+    <li>The partial views are used in <i>Views/News/RecentAdditions.cshtml</i> to show data from the view model.<br>
+</ul> 
